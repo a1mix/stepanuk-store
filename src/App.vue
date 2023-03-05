@@ -1,9 +1,12 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Главная</router-link> |
+    <router-link to="/about">О компаний</router-link>
   </nav>
   <router-view/>
+  <footer>
+    Номера емэйлы и тд
+  </footer>
 </template>
 
 <style>
@@ -26,5 +29,11 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+footer {
+  padding: 30px;
+  height: 100px;
+  background: rgb(182, 182, 182);
 }
 </style>
