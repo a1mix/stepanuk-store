@@ -1,15 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Главная</router-link> |
-    <router-link to="/about">О компаний</router-link>
-  </nav>
-  <router-view/>
-  <footer>
-    Номера емэйлы и тд
-  </footer>
+  <nav-item></nav-item>
+    <router-view/>
+  <footer-item></footer-item>
 </template>
 
+<script>
+import FooterItem from '@/components/FooterItem.vue'
+import NavItem from '@/components/NavItem.vue'
+export default {
+  components: {
+    FooterItem,
+    NavItem
+  },
+  
+}
+</script>
+
 <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,22 +31,9 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
+a {
+  text-decoration: none;
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-footer {
-  padding: 30px;
-  height: 100px;
-  background: rgb(182, 182, 182);
-}
 </style>
